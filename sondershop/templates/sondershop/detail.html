@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<h2 style="font-family: 'Press Start 2P', cursive;">{{ shop.title }}</h2>
+<br>
+<br>
+<img src="{{ shop.image.url }}">
+<br>
+<br>
+<xyz style="font-family: 'Roboto Mono', monospace;">
+{{ shop.description }}
+{% endblock %}

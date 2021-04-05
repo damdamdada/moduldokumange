@@ -1,0 +1,30 @@
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+{% extends 'home/base.html' %}
+{% block content %}
+{% for hack in hacks %}
+{% load static %}
+
+
+<link rel="stylesheet" href="{% static 'hacken.css' %}">
+<xyz style="color:#4285F4;">
+  <a style = "text-decoration:none;", href ="{% url 'hack:detailhack' hack.id %}">
+
+    <h2 style="font-family: 'Press Start 2P', cursive;">
+      {{ hack.title }}
+    </h2>
+  </a>
+<br>
+<br>
+<img src="{{ hack.image.url }}">
+<br>
+<br>
+<xyz style="font-family: 'Roboto Mono', monospace;">
+{{ hack.description|truncatechars:600  }}
+<br>
+<br>
+<br>
+<br>
+
+{% endfor %}
+{% endblock %}

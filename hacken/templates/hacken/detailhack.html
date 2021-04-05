@@ -1,0 +1,12 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+<h2 style="font-family: 'Press Start 2P', cursive;">{{ hack.title }}</h2>
+<br>
+<br>
+<img src="{{ hack.image.url }}">
+<br>
+<br>
+<xyz style="font-family: 'Roboto Mono', monospace;">
+{{ hack.description }}
+{% endblock %}

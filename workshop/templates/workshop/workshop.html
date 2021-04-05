@@ -1,0 +1,25 @@
+{% extends 'home/base.html' %}
+
+{% block content %}
+
+
+{% for work in works %}
+<h2 style="font-family: 'Press Start 2P', cursive;">
+  {{ work.title }}
+</h2>
+<br>
+<br>
+<img src="{{ work.image.url }}">
+<br>
+<br>
+<xyz style="font-family: 'Roboto Mono', monospace;">
+{{ work.description }}
+<br>
+<br>
+---
+<br>
+<br>
+
+{% endfor %}
+
+{% endblock %}
